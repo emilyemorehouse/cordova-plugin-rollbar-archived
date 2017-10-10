@@ -1,14 +1,18 @@
 {
-  "name": "resgrid-cordova-plugins-rollbar",
-  "version": "1.4.0",
+  "name": "am-cordova-plugins-rollbar",
+  "version": "1.5.0",
   "description": "This plugin adds Rollbar App monitoring to your application. Currently supports iOS and Android. This plugin was created by Resgrid for use in our Ionic applications. You need to subscribe to the Rollbar service to use the plugin and make sure to set the ROLLBAR_ACCESS_TOKEN and ROLLBAR_ENVIRONMENT variables on install.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "cordova": {
+    "id": "am-cordova-plugins-rollbar",
+    "platforms": [
+      "android",
+      "ios"
+    ]
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Resgrid/cordova-plugins-rollbar.git"
+    "url": "https://github.com/am/cordova-plugins-rollbar.git"
   },
   "keywords": [
     "cordova",
@@ -20,8 +24,5 @@
   ],
   "author": "Shawn Jackson",
   "license": "Apache 2.0",
-  "bugs": {
-    "url": "https://github.com/Resgrid/cordova-plugins-rollbar/issues"
-  },
-  "homepage": "https://github.com/Resgrid/cordova-plugins-rollbar"
+  "homepage": "https://github.com/am/cordova-plugins-rollbar"
 }

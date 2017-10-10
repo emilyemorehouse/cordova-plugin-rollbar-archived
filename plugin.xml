@@ -3,23 +3,17 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:rim="http://www.blackberry.com/ns/widgets"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="resgrid.cordova.plugins.rollbar"
-    version="1.4.0">
-
+    id="am-cordova-plugins-rollbar"
+    version="1.5.0">
     <name>Rollbar</name>
-
     <description>
       This plugin adds Rollbar App monitoring to your application. Currently supports iOS and Android. This plugin was created by Resgrid for use in our Ionic applications. You need to subscribe to the Rollbar service to use the plugin and make sure to set the ROLLBAR_ACCESS_TOKEN and ROLLBAR_ENVIRONMENT variables on install.
     </description>
-
     <license>Apache 2.0</license>
-
     <keywords>resgrid, rollbar, crash, monitor, apm, error, exception, performance</keywords>
-
     <engines>
         <engine name="cordova" version=">=3.3.0" />
     </engines>
-
     <!-- JavaScript interface -->
     <js-module src="www/rollbar.js" name="RollbarJSInterface">
         <clobbers target="cordova.plugins.Rollbar" />
@@ -36,21 +30,16 @@
             </feature>
             <plugin name="CDVRollbar" value="CDVRollbar"/>
         </config-file>
-
         <header-file src="src/ios/CDVRollbar.h" />
         <source-file src="src/ios/CDVRollbar.m" />
-
         <config-file target="*-Info.plist" parent="RollbarAccessToken">
             <string>$ROLLBAR_ACCESS_TOKEN</string>
         </config-file>
-
         <config-file target="*-Info.plist" parent="RollbarEnvironment">
             <string>$ROLLBAR_ENVIRONMENT</string>
         </config-file>
-
         <!-- CrashReporter Lib -->
         <framework src="src/ios/CrashReporter.framework" custom="true" />
-
         <!-- Rollbar Lib -->
         <framework src="src/ios/Rollbar.framework" custom="true" />
     </platform>
@@ -65,13 +54,11 @@
                 <param name="onload" value="true" />
             </feature>
         </config-file>
-
         <source-file src="src/android/res/values/rollbar.xml" target-dir="res/values/" />
         <config-file target="res/values/rollbar.xml" parent="/*">
             <string name="rollbar_access_token">$ROLLBAR_ACCESS_TOKEN</string>
             <string name="rollbar_environment">$ROLLBAR_ENVIRONMENT</string>
         </config-file>
-
         <config-file target="AndroidManifest.xml" parent="/*">
             <meta-data android:name="resgrid.cordova.plugins.rollbar.AccessToken" android:value="@string/rollbar_access_token"/>
             <meta-data android:name="resgrid.cordova.plugins.rollbar.Environment" android:value="@string/rollbar_environment"/>
@@ -80,14 +67,10 @@
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
             <uses-permission android:name="android.permission.GET_TASKS"/>
         </config-file>
-
         <!-- copy Rollbar Lib -->
         <source-file src="src/android/RollbarSDK/rollbar-android-0.1.2.jar" target-dir="libs/" framework="true"/>
-
         <!-- cordova plugin src files -->
         <source-file src="src/android/resgrid/cordova/plugins/CDVRollbar.java" target-dir="src/resgrid/cordova/plugins/rollbar" />
-
     </platform>
 
 </plugin>
-
