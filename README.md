@@ -1,12 +1,13 @@
-Rollbar Cordova Plugin
-=======================
+[![npm version](https://badge.fury.io/js/cordova-plugin-rollbar.svg)](https://badge.fury.io/js/cordova-plugin-rollbar)
+
+
+# Rollbar Cordova Plugin #
 
 PhoneGap / Cordova plugin for using the Rollbar service. Currently supports Android and iOS allowing for capturing native exceptions that occur outside the context of the Web View (i.e. native crashes).
 
 For tracking within your Web View, see [the Rollbar plugin for Angular](https://github.com/tandibar/ng-rollbar).
 
-Rollbar
---------
+## Rollbar ##
 This plugin requires a Rollbar account. Sign up for your free Rollbar account [here](https://rollbar.com/).
 
 ### Installation ###
